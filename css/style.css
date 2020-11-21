@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: "Montserrat", "Times New Roman", Arial;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+/* Title page */
+
+#titleWrapper {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    'he nv'
+    'ma ma'
+    ;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 90%;
+}
+
+#titleWrapper > * {
+    background-color: rgb(192,33,34);
+}
+
+#titleWrapper header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#titleWrapper nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#titleWrapper main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/lobster.jpg);
+    background-size: 100%;
+}
+
+#titleWrapper main h1 {
+    font-size: 5em;
+}
+
+#titleWrapper main h2 {
+    font-size: 2em;
+}
+
+/* Grid-areas */
+
+header {
+    grid-area: he;
+}
+
+nav {
+    grid-area: nv;
+}
+
+main {
+    grid-area: ma;
+}
