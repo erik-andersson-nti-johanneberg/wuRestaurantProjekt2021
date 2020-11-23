@@ -1,6 +1,11 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../misc/Montserrat-Regular.ttf");
+}
+
 body {
     margin: 0;
-    font-family: "Montserrat", "Times New Roman", Arial;
+    font-family: Montserrat, "Times New Roman", Arial;
     color: white;
 }
 
@@ -8,18 +13,30 @@ a {
     color: white;
 }
 
+.button {
+    width: 90px;
+    height: 90px;
+    background-image: url(../img/arrow.png);
+    background-size: 100%;
+    border-radius: 100%;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
 /* Title page */
 
 #titleWrapper {
     height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     display: grid;
     grid-template-areas: 
     'he nv'
     'ma ma'
     ;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 20% 80%;
 }
 
 #titleWrapper > * {
@@ -31,6 +48,14 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+#titleWrapper header img {
+    max-width:60%;
+    max-height:60%;
+    border-radius: 100%;
+    width: auto;
+    height: auto;
 }
 
 #titleWrapper nav {
@@ -46,6 +71,7 @@ a {
     align-items: center;
     background-image: url(../img/lobster.jpg);
     background-size: 100%;
+    background-position-y: -20vh;
 }
 
 #titleWrapper main h1 {
@@ -54,6 +80,106 @@ a {
 
 #titleWrapper main h2 {
     font-size: 2em;
+}
+
+/* contentWrapper1 */
+#contentWrapper1 {
+    color: black;
+    height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    'as se'
+    'fo fo'
+    ;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 90% 10%;
+}
+
+#contentWrapper1 > * {
+    background-color: rgb(240, 240, 240);
+}
+
+#contentWrapper1 a {
+    color: black;
+}
+
+#contentWrapper1 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutArticle {
+    flex: 0.48;
+    width: 99%;
+    border-radius: 2px;
+    box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.chefs {
+    background-image:
+    linear-gradient(211deg, rgba(2,0,36,0) 0%, rgba(255,255,255,1) 63%), url("../img/chef.jpg");
+    background-position-y: 40%;
+    background-position-x: 20%;
+}
+
+.meat {
+    background-image:
+    linear-gradient(211deg, rgba(2,0,36,0) 0%, rgba(255,255,255,1) 63%), url("../img/meat.jpg");
+    background-size: 100%;
+    background-position-y: 40%;
+    background-position-x: 50%;
+}
+
+.aboutArticle:hover {
+    box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bar {
+    width: 10px;
+    height: 100%;
+    background-color: rgb(192,33,34);
+    margin-right: 30px;
+    border-radius: 5px;
+}
+
+.indent {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#contentWrapper1 aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#contentWrapper1 aside > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navButton {
+    max-width: 70%;
+    max-height: 30%;
+
+    border-radius: 100%;
+    box-shadow: 0px 0px 0px 2px black;
+    transition: 0.2s;
+}
+
+.navButton:hover {
+    box-shadow: 0px 0px 0px 6px black;
+    cursor: pointer;
 }
 
 /* Grid-areas */
@@ -68,4 +194,16 @@ nav {
 
 main {
     grid-area: ma;
+}
+
+aside {
+    grid-area: as;
+}
+
+section {
+    grid-area: se;
+}
+
+footer {
+    grid-area: fo;
 }
