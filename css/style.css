@@ -13,6 +13,14 @@ a {
     color: white;
 }
 
+h1 h2 h3 {
+    text-align: center;
+}
+
+h1 {
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
 .button {
     width: 90px;
     height: 90px;
@@ -32,22 +40,23 @@ a {
     max-width: 100vw;
     display: grid;
     grid-template-areas: 
-    'he nv'
-    'ma ma'
+    'the tnv'
+    'tma tma'
     ;
     grid-template-columns: 20% 80%;
     grid-template-rows: 20% 80%;
 }
 
-#titleWrapper > * {
-    background-color: rgb(192,33,34);
-}
-
 #titleWrapper header {
+    background-color: rgb(192,33,34);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+#titleWrapper nav {
+    background-color: rgb(192,33,34);
 }
 
 #titleWrapper header img {
@@ -58,20 +67,11 @@ a {
     height: auto;
 }
 
-#titleWrapper nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 #titleWrapper main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/lobster.jpg);
-    background-size: 100%;
-    background-position-y: -20vh;
 }
 
 #titleWrapper main h1 {
@@ -89,8 +89,8 @@ a {
     max-width: 100vw;
     display: grid;
     grid-template-areas: 
-    'as se'
-    'fo fo'
+    'cas cse'
+    'cfo cfo'
     ;
     grid-template-columns: 15% 85%;
     grid-template-rows: 90% 10%;
@@ -112,14 +112,20 @@ a {
 }
 
 .aboutArticle {
-    flex: 0.48;
+    color: black;
+    height: 47%;
     width: 99%;
+    overflow: hidden;
     border-radius: 2px;
     box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.1);
     transition: 0.2s;
 
     display: flex;
     justify-content: flex-start;
+}
+
+.aboutArticle:hover {
+    box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .aboutArticle span.text {
@@ -139,10 +145,6 @@ a {
     background-size: 100%;
     background-position-y: 40%;
     background-position-x: 50%;
-}
-
-.aboutArticle:hover {
-    box-shadow: -5px -5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .bar {
@@ -172,6 +174,63 @@ a {
     justify-content: center;
 }
 
+/* Menu */
+#menuWrapper {
+    height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    'mna'
+    'mma'
+    ;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 100%;
+}
+
+#menuWrapper > * {
+    background-color: rgb(240, 240, 240);
+}
+
+#menuWrapper nav {
+    background-color: green;
+}
+
+#menuWrapper nav > * {
+    cursor: pointer;
+    font-size: 2em;
+    transition: 0.1s;
+}
+
+#menuWrapper nav > *:hover {
+    cursor: pointer;
+    font-size: 3em;
+}
+
+#menuWrapper main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#menuWrapper main article {
+    flex-basis: 48%;
+    height: 20%;
+    margin: 0 1%;
+
+    display: flex;
+    align-items: center;
+    text-indent: 2em;
+}
+
+/* Misc */
+
+.slideShow {
+    background-image: url(../img/lobster.jpg);
+    background-size: 100%;
+    background-position-y: -20vh;
+}
+
 .navButton {
     max-width: 70%;
     max-height: 30%;
@@ -186,28 +245,47 @@ a {
     cursor: pointer;
 }
 
+.spaceEven {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.spaceEvenColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 /* Grid-areas */
 
-header {
-    grid-area: he;
+#titleWrapper header {
+    grid-area: the;
 }
 
-nav {
-    grid-area: nv;
+#titleWrapper nav {
+    grid-area: tnv;
 }
 
-main {
-    grid-area: ma;
+#titleWrapper main {
+    grid-area: tma;
 }
 
-aside {
-    grid-area: as;
+#contentWrapper1 aside {
+    grid-area: cas;
+}
+#contentWrapper1 section {
+    grid-area: cse;
+}
+#contentWrapper1 footer {
+    grid-area: cfo;
 }
 
-section {
-    grid-area: se;
+#menuWrapper nav {
+    grid-area: mna;
 }
 
-footer {
-    grid-area: fo;
+#menuWrapper main {
+    grid-area: mma;
 }
