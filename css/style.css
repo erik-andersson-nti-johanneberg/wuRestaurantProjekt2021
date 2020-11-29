@@ -18,7 +18,7 @@ h1 h2 h3 {
 }
 
 h1 {
-    text-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
 .button {
@@ -183,7 +183,7 @@ h1 {
     'mna'
     'mma'
     ;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 100% 0%;
     grid-template-columns: 100%;
 }
 

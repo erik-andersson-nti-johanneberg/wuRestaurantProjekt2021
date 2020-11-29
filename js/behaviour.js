@@ -1,4 +1,4 @@
-scrollSpeed = 20;
+const scrollSpeed = 20;
 
 const scrollDown = () => {
     let scroll = setInterval(() => {
@@ -42,7 +42,12 @@ const desserts = `
 <article class="aboutArticle">Suspiscous looking eye</article>
 `;
 
+let menuRevealed = false;
+
 const changeMenu = (menu) => {
+    if(!(menuRevealed)){
+        revealMenu();
+    }
     let menuElement = document.getElementById('menu');
     if (menu == "mainCourses"){
         menuElement.innerHTML = mainCourses;
@@ -53,4 +58,22 @@ const changeMenu = (menu) => {
     if(menu == "desserts"){
         menuElement.innerHTML = desserts;
     }
+}
+
+const revealMenu = () => {
+    menuRevealed = true;
+    let grid = document.getElementById("menuWrapper");
+    let height = 0;
+    let velocity = 3;
+    let heightMax = 70;
+    let animation = setInterval(() => {
+        grid.style.gridTemplateRows = (100 - height).toString() +"% " + height.toString() + "%";
+        height += velocity;
+        if(height >= heightMax){
+            clearInterval(animation);
+        }
+        if(velocity > 0.05)
+            velocity *= 0.958;
+        console.log(height);
+    },1);
 }
