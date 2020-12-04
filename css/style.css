@@ -195,13 +195,13 @@ h1 {
     background-color: green;
 }
 
-#menuWrapper nav > * {
+#selectCourseType > * {
     cursor: pointer;
     font-size: 2em;
     transition: 0.1s;
 }
 
-#menuWrapper nav > *:hover {
+#selectCourseType > *:hover {
     cursor: pointer;
     font-size: 3em;
 }
@@ -220,10 +220,32 @@ h1 {
 
     display: flex;
     align-items: center;
-    text-indent: 2em;
+    justify-content: space-between;
+}
+
+.menuItem {
+    padding-left: 2em;
+}
+
+.price {
+    color: green;
+    padding-right: 2em;
+}
+
+#hoverImage {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    pointer-events: none;
+    transition: 0.3s;
 }
 
 /* Misc */
+
+.invisible {
+    display: none;
+}
 
 .slideShow {
     background-image: url(../img/lobster.jpg);

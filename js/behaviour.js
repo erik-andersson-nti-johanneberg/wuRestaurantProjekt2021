@@ -15,32 +15,66 @@ const goToMenu = () => {
     open("../menu.html", "_self");
 }
 
-const appetizers = `
-<article class="aboutArticle">Child</article>
-<article class="aboutArticle">Liten Hummer</article>
-<article class="aboutArticle">Shredded Hummer</article>
-<article class="aboutArticle">Smol Hummer</article>
-<article class="aboutArticle">Kräfta</article>
-<article class="aboutArticle">Upplevelsen</article>
-`;
+const getRows = (str) => {
+    rows = [""];
+    for(let c = 0; c < str.length; c++){
+        if(str[c] == "\n"){
+            rows.push("");
+        }
+        row = rows.length-1;
 
-const mainCourses = `
-<article class="aboutArticle">hummer</article>
-<article class="aboutArticle">lobster</article>
-<article class="aboutArticle">child</article>
-<article class="aboutArticle">lobster fast stor</article>
-<article class="aboutArticle">lobster fast stor fast mindre</article>
-`;
+        rows[row] += str[c]
+    }
+    return rows;
+}
+/*
+const appetizers = `<article class="aboutArticle"><span class="menuItem">Humrar fast små (räkor)</span> <span class="price">5$</span></article>
+<article class="aboutArticle"><span class="menuItem">"Färsk" hummer</span> <span class="price">5$</span></article>
+<article class="aboutArticle"><span class="menuItem">Rom</span> <span class="price">5$</span></article>
+<article class="aboutArticle"><span class="menuItem">Väldigt färsk hummer</span> <span class="price">5$</span></article>
+<article class="aboutArticle"><span class="menuItem">Kräfta</span> <span class="price">5$</span></article>
+<article class="aboutArticle"><span class="menuItem">Upplevelsen</span> <span class="price">5$</span></article>`;
+*/
 
-const desserts = `
-<article class="aboutArticle">Deep fried milk</article>
-<article class="aboutArticle">Lobster</article>
-<article class="aboutArticle">Shrimp but bigger (lobster)</article>
-<article class="aboutArticle">Crab shells</article>
-<article class="aboutArticle">Pinapple with shrimps inside</article>
-<article class="aboutArticle">Carcass</article>
-<article class="aboutArticle">Suspiscous looking eye</article>
-`;
+let appetizers = `Humrar fast små (räkor)
+"Färsk" Hummer
+Rom
+Väldigt färsk humer
+Kräfta
+Upplevelsen`;
+
+let mainCourses = `Simpel Hummer
+Avancerad Hummer
+Hummer fast blå
+Hummer fast husdjur
+Hummer fast krossad
+Hummer fast manglad
+Lobster
+Dagens special`;
+
+let desserts = `Djupfriterad mjölk
+Gårdagens special
+En till hummer
+Hummerskal (ingår vid huvudrätt)
+Ananas med räkor i
+Slumpmässig matvara från källaren
+Ögon`;
+
+const initializeMenu = (menu) => {
+    let newString = "";
+    let rows = getRows(menu)
+    for(let r = 0; r < rows.length; r++){
+        newString += `<article class="aboutArticle"><span class="menuItem">`;
+        newString += rows[r];
+        newString += `</span> <span class="price">5$</span></article>`;
+        newString += "\n";
+    }
+    return newString
+}
+
+appetizers = initializeMenu(appetizers);
+mainCourses = initializeMenu(mainCourses);
+desserts = initializeMenu(desserts);
 
 let menuRevealed = false;
 
@@ -76,4 +110,13 @@ const revealMenu = () => {
             velocity *= 0.958;
         console.log(height);
     },1);
+}
+
+window.onload = () => {
+    const body = document.getElementById("body");
+    body.addEventListener("mousemove", e => {
+    const overlay = document.getElementById("hoverImage");
+    overlay.style.top = e.pageY - 50 + "px";
+    overlay.style.left = e.pageX - 50 + "px";
+});
 }
