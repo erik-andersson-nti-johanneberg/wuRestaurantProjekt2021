@@ -11,8 +11,8 @@ const scrollDown = () => {
     }, 1);
 }
 
-const goToMenu = () => {
-    open("../menu.html", "_self");
+const goTo = (page) => {
+    open("../" + page, "_self");
 }
 
 const getRows = (str) => {
@@ -27,14 +27,6 @@ const getRows = (str) => {
     }
     return rows;
 }
-/*
-const appetizers = `<article class="aboutArticle"><span class="menuItem">Humrar fast små (räkor)</span> <span class="price">5$</span></article>
-<article class="aboutArticle"><span class="menuItem">"Färsk" hummer</span> <span class="price">5$</span></article>
-<article class="aboutArticle"><span class="menuItem">Rom</span> <span class="price">5$</span></article>
-<article class="aboutArticle"><span class="menuItem">Väldigt färsk hummer</span> <span class="price">5$</span></article>
-<article class="aboutArticle"><span class="menuItem">Kräfta</span> <span class="price">5$</span></article>
-<article class="aboutArticle"><span class="menuItem">Upplevelsen</span> <span class="price">5$</span></article>`;
-*/
 
 let appetizers = `Humrar fast små (räkor)
 "Färsk" Hummer
@@ -79,9 +71,7 @@ desserts = initializeMenu(desserts);
 let menuRevealed = false;
 
 const changeMenu = (menu) => {
-    if(!(menuRevealed)){
-        revealMenu();
-    }
+    revealMenu();
     let menuElement = document.getElementById('menu');
     if (menu == "mainCourses"){
         menuElement.innerHTML = mainCourses;
