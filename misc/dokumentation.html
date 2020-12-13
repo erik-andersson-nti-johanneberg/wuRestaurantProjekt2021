@@ -14,6 +14,9 @@
         table, td, th {
             border: 1px solid black
         }
+        section {
+            width: 50%;
+        }
     </style>
 
 </head>
@@ -22,18 +25,48 @@
     <h1>Dokumentation projekt Vt</h1>
 
     <h2>1. Idébeskrivning</h2>
-    <!-- Vad ska du göra? Vilken är din målgrupp? Om du utvecklar en tidigare sida; Vad ska du förändra/utveckla? -->
-    Jag skall göra en webbsida för en fiktionell restaurang som serverar husmanskost.
-    Min målgrupp är alla åldrar, det är inte direkt en super-prestigiös restaurang
-    men ändå en restaurang man skulle gå ut och äta på om man firar något litet.
+    <section> <!--Förlåt Emil, jag orkade bara inte styla denna sida-->
+        <!-- Vad ska du göra? Vilken är din målgrupp? Om du utvecklar en tidigare sida; Vad ska du förändra/utveckla? -->
+        Jag skall göra en webbsida för en fiktionell restaurang som serverar endast humrar, 
+        med kanske något annat skaldjur här och där. Det må vara en ganska ointressan inriktning
+        men den är väldigt tydlig i alla fall. Det är en relativt fin restaurang, men inte på
+        en michelin-stjärna nivå, min målgrupp blir därmed de som vill fira något utan att spendera
+        supermycket pengar.
+        Mina tre sidor skall vara: Startsida, Menysida samt reviews-sida. Om jag även hinner gör jag
+        en bokningssida.
+        <br>
+        <br>
+        Startsidan skall innehålla lite information om restaurangen i syfte att sälja.
+        Jag har rubriken "Vårt kött kommer endast från Sverige" som reklam för de miljövänliga,
+        samt en rubrik "Om våra kockar" för lite allmän information. Det hela skall se ut som
+        en liten information/nyhets-sektion.
+        <br>
+        <br>
+        Menysidan skall vara indelad i tre delar: förrätt, huvudrätt samt efterrätt.
+        Min tanke är att man skall kunna kvickt byta mellan dessa kategorier utan att behöva skrolla
+        särskilt långt, så det fixar jag i JS, (givetvis lite udda kod blir det utan JSX men det får bli)
+    </section>
+
 
     <h2>2. Planering</h2>
-    Jag börjar med huvudsidan enligt min skiss och stylar mina andra sidor
-    utifrån samma "palett"
+    <section>
+        Jag börjar med att göra en skiss av startsidan. Efter det 
+        ritar/redigerar/hämtar de bilder jag behöver för sidan samt gör min logga.
+        Efter det skall jag göra min index.html samt styla den, färgerna väljer jag
+        utifrån bilderna jag vill ha med. Inte föränn index.html är klar gör jag meny.html 
+        och stylar den, i syfte att ha en "palett" att gå utifrån när jag gör min skiss/style
+    </section>
 
     <h3>2.1 Handskiss</h3>
     <!-- Här lägger du en bild på din handskiss av layouten. Viktigt att du beskriver vilka boxelement som ska användas. Visa även hur du tänker med ditt grid (Hur många kolumner?) -->
-    <img src="skiss1.jpg" alt="Skiss 1" style="width: 500px;height: auto;">
+    <figure>
+        <img src="skiss1.jpg" alt="Startsida" style="width: 500px;height: auto;">
+        <img src="skiss2.jpg" alt="Menysida" style="width: 300px;height: auto;">
+        <img src="skiss3.jpg" alt="reviews-sida" style="width: 300px;height: auto;">
+        <img src="skiss4.jpg" alt="omgjord reviews-sida" style="width: 300px;height: auto;">
+        <figcaption><em>Notera: allt är inte skalenligt då jag under processen ibland ångrade mig om vissa mått</em></figcaption>
+        <figcaption><em>I min andra skiss har jag två rader och en kolumn, jag glömde skriva detta och hittar inte min skiss</em></figcaption>
+    </figure>
 
 
     <h3>2.2 Schema</h3>
@@ -41,11 +74,11 @@
 
     <table>
         <tr>
-            <th>Vecka</th><th>På lektionen</th><th>Utanför lektionen</th>
+            <th>Lektion</th><th>På lektionen</th><th>Utanför lektionen</th>
         </tr>
 
         <tr>
-            <td>4</td>
+            <td>1</td>
             <td>
             <!-- Vad görs på lektionen vecka 4? -->
             <ul>
@@ -56,136 +89,133 @@
             <td>
             <!-- Vad görs utanför lektionen vecka 4? -->
             <ul>
-            <li>Jag kodar första sidan</li>
-            <li>Jag gör gradiens på artiklar ty det ger bättre kontrast</li>
+            <li>Jag fortsätter på startsidan</li>
+            <li>Jag stylar mer</li>
             </ul>
             </td>
         </tr>
 
         <tr>          
-            <td>5</td>
+            <td>2</td>
             <td>
             <!-- Vad görs på lektionen vecka 5? -->
             <ul>
             <li>Jag skissar meny-sidan</li>
             <li>Jag dokumenterar bättre</li>
-            <li>Jag fixar loggan</li>
-            <li>Jag fixar grid-areas</li>
             </ul>
             </td>
             <td>
-            Jag kollar andra webbläsare
+            Jag testar med andra webbläsare
             <!-- Vad görs utanför lektionen vecka 5? -->
             </td>
         </tr>
 
         <tr>          
-            <td>6</td>
+            <td>3</td>
             <td>
+                Jag fortsätter med menysidan och fixar
+                min JS
             <!-- Vad görs på lektionen vecka 6? -->
             </td>
             <td>
+                Jag animerar menysidan
             <!-- Vad görs utanför lektionen vecka 6? -->
             </td>
         </tr>
 
         <tr>           
-            <td>7</td>
+            <td>4</td>
             <td>
+                Jag skissar reviews-sidan
             <!-- Vad görs på lektionen vecka 7? -->
             </td>
             <td>
+                Jag gör reviews-sidan samt finputsning
             <!-- Vad görs utanför lektionen vecka 7? -->
             </td>
         </tr>
-
-        <tr>           
-            <td>8</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 8? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 8? -->
-            </td>
-        </tr>
-
-        <tr>          
-            <td>9</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 9? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 9? -->
-            </td>
-        </tr>
-
-        <tr>          
-            <td>10</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 10? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 10? -->
-            </td>
-        </tr>
-
-        <tr>           
-            <td>11</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 11? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 11? -->
-            </td>
-        </tr>
-
-        <tr>          
-            <td>12</td>
-            <td>
-            <!-- Vad görs på lektionen vecka 12? -->
-            </td>
-            <td>
-            <!-- Vad görs utanför lektionen vecka 12? -->
-            </td>
-        </tr>
-
     </table>
 
 
     <h2>3. Dokumentation</h2>
     <!-- Här skriver du efter varje lektion. Vad har jag gjort? Vad gick bra? Vad gick mindre bra? Vad ska jag tänka på till nästa gång? -->
 
-    <h3>Lektion vecka 4</h3>
+    <h3>Lektion 1</h3>
     <!-- Fyll på med dokumentation här. -->
+    <section>
+        Lektion 1 så skissade jag min webbsida och gjorde logo.jpg.
+        Alla photoshop-filer lägger jag här i misc, samt skisserna.
+        Jag valde att inte lägga dem i img då de inte riktigt har med den faktiska webbsidan
+        att göra. Där hemma gjorde jag min index.html, började styla min grid i CSS och
+        fixade bl.a. en font. Jag fick problem med overflow orsakad av grid men löste detta
+        genom att se till använda max-width istället för width
+        Jag såg till att använda % istället för px i min CSS så mycket som möjligt.
+    </section>
+        
+    <h3>Lektion 2</h3>
+    <!-- Fyll på med dokumentation här. -->
+    <section>
+        Lektion 2 Började jag skissa på menysidan och beslöt mig för något som skulle
+        ha samma bakgrund och färg som förstasidan, för att hålla webbsidan kontinuerlig. Jag beslöt
+        mig för att återanvända min "aboutArticle" class från startsidan för menyartiklarna,
+        då jag från början hade tänkt att man skulle kunna klicka på varje artikel för att
+        se en bild. Jag får se om jag hinner göra detta, annars får det se ut så ändå.
+        Där hemma gjorde jag egna ikoner för min navbar (som jag kallade aside i min kod, vilket
+        är lite konstigt men jag tyckte att båda passade lika bra och aside var mer logiskt för
+        mig när jag skulle göra en grid.)
+    </section>
 
-    <h3>Lektion vecka 5</h3>
-    <!-- Fyll på med dokumentation här. -->
 
-    <h3>Lektion vecka 6</h3>
-    <!-- Fyll på med dokumentation här. -->
+    <h3>Lektion 3</h3>
+    <section>
+        Lektion 3 fortsatte jag på menysidan och jobbade på att få animationerna rätt när man klickar
+        på några av kategorierna. Min lösning blev lite ful och jag använde JS istället för CSS-animationer
+        men det funkar snabbt nog ändå på min dator.
+    </section>
 
-    <h3>Lektion vecka 8</h3>
-    <!-- Fyll på med dokumentation här. -->
-
-    <h3>Lektion vecka 9</h3>
-    <!-- Fyll på med dokumentation här. -->
-
-    <h3>Lektion vecka 10</h3>
-    <!-- Fyll på med dokumentation här. -->
-
-    <h3>Lektion vecka 11</h3>
-    <!-- Fyll på med dokumentation här. -->
-
-    <h3>Lektion vecka 12</h3>
-    <!-- Fyll på med dokumentation här. -->
+    <h3>Lektion 4</h3>
+    Lektion 4 fixade jag en skiss för reviews-sidan, gjorde en html fil samt
+    stylade den.
 
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
+    <section>
+        När jag testar webbsidan i Firefox märker jag till ytan inga större
+        skillnader. Min font är lite krispigare kanske, men annars ingen riktig skillnad.
+        Vid närmare inspektion ser jag dock att mina animationer är lite mer laggiga
+        och oförutsägbara. Detta gäller både CSS och JS animationer, alltså vet jag inte
+        om detta problemet är i min kontroll. Men, generellt sätt märker man ingen större
+        skillnad mellan olika webbläsare. Då det stod i uppgiften att sidan endast skall vara
+        till desktop valde jag att inte kolla på mobilen.
+    </section>
 
     <h2>5. Utvärdering</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
-
+    <section>
+        I helhet är jag ganska nöjds med min sida. Jag gillar hur jag stylat den och
+        jag känner att jag har gjort ett helt ok gränssnitt samt kunnat visa mina kunskaper. 
+        Sidan är dock, långt ifrån perfekt, och något jag definitivt kunde förbättrat var
+        min kodstruktur. I början hade jag nästan alla CSS selektorer relativa till en wrapper, 
+        och ärligt talat är det fortfarande ganska mycket så. Jag kunde ha dragit nytta av att
+        göra mer allmäna klasser i början av projektet, då hade det nog tagit mindre tid
+        att styla allting. Däremot är jag ganska nöjd med hur jag lade in css för varje
+        sida i tre olika delar av CSS dokumentet och sedan hade mer allmäna saker under /* misc */
+        <br>
+        Något jag kunde gjort på menysidan är att ha bilder på mina maträtter, dock hade jag inte
+        tid att genomföra detta. Hade jag inte haft en annan idé från början hade nog menysidan sett lite
+        mer ordentlig ut då det just nu ser ut som ofärdiga knappar nästan.
+        <br>
+        Min review-sida blev lite påskyndad och jag kunde kanske haft stjärnor med istället för bråk
+        för ratings om jag hade hunnit. Hade jag planerat min tid lite bättre hade jag nog
+        kunnat göra denna sidan lite mer unik samt kunnat visa mina kunskaper bättre.
+        <br>
+        Något jag är väldigt nöjd med är min startsida då jag gillar upplägget där samt hur jag stylade
+        den.
+        <br>
+        Inför nästa projekt måste jag tänka mer på att planera ordentligt innantill, och även att ha rimliga
+        mål.
+    </section>
 </body>
 </html>
